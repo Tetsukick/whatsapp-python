@@ -119,6 +119,8 @@ class WhatsApp(object):
 
     # all the files starting with _ are imported here, and should not be imported directly.
 
+    from .ext._message import send_template
+
     is_message = staticmethod(is_message)
     get_mobile = staticmethod(get_mobile)
     get_name = staticmethod(get_name)
@@ -243,4 +245,4 @@ class Message(object):
         self.url = self.instance.url
         self.headers = self.instance.headers
 
-    from .ext._message import send, reply, mark_as_read, send_template
+    from .ext._message import send, reply, mark_as_read
